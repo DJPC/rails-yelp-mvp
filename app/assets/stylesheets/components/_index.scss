@@ -1,0 +1,12 @@
+// Import your components CSS files here.
+@import "alert";
+@import "avatar";
+@import "navbar";
+
+
+// Example 1: Let's say you add a new _contact.scss file in pages then modify pages/_index.scss as:
+// @import "home";
+// @import "contact";
+
+// Example 2: Let's say you add a new _card.scss file in components then modify components/_index.scss as:
+// @import "card";
