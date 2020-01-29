@@ -22,11 +22,17 @@ def new
 end
 
 def create
-  @restaurant = Restaurant.new(name: params[:name], address: params[:address], phone_number: params[:phone_number], category: [:category])
+  @restaurant = Restaurant.new(restaurant_params)
   @restaurant.save
+  redirect_to restaurant_path(@restaurant)
 end
 
 
+private
+
+def restaurant_params
+  params.require(:restaurant).permit(:name, :address, :phone_number, :category)
+  # name: params[:name], address: params[:address], phone_number: params[:phone_number], category: [:category])
 end
 
 
